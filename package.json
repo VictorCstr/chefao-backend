@@ -4,7 +4,8 @@
   "description": "api para loja de sucos organicos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Grupo 10 - Desafio Chefão XP40",
