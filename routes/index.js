@@ -4,8 +4,12 @@ const routes = express.Router()
 const CategoriasController = require('../controllers/CategoriasController')
 const SucosController = require('../controllers/SucosController')
 
-routes.get('/', (req,res) => {
-    res.send('Olá!')
-})
+
+routes.post('/cadastrar', CategoriasController.createCategory)
+
+routes.get('/juices', SucosController.returnJuices)
+routes.get('/juices/:category', SucosController.returnJuicesByCategory)
+routes.post('/cadastrarjuice', SucosController.createJuices)
+
 
 module.exports = routes
