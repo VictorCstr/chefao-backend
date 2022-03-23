@@ -15,6 +15,10 @@ const Sucos = db.define(
         type: Sequelize.STRING,
         allowNull: false
      },
+     slug:{
+      type: Sequelize.STRING,
+      allowNull: false
+      },
      descricao:{
         type: Sequelize.STRING,
         allowNull: false,

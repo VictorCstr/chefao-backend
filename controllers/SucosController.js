@@ -19,11 +19,24 @@ const SucosController = {
     },
     returnJuices: async(req,res) =>{
         Sucos.findAll()
+        .then(response => {
+            return res.status(200).json(response);
+        })
+        .catch(error => {
+        return res.status(500).json(error);
+          })
     },
     returnJuicesByCategory: async (req,res) =>{
+        let category = req.params.category
         Sucos.findAll({
-           
+           include: Categorias,
+           where: {category}
+        }).then(response => {
+            return res.status(200).json(response);
         })
+        .catch(error => {
+        return res.status(500).json(error);
+          })
     }
 }
 
