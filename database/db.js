@@ -1,11 +1,11 @@
 const Sequelize = require('sequelize')
 
-const DB_NAME = "juice_mania";
-const DB_USER = "root";
-const DB_PASS = "mysql";
+const DB_NAME = "heroku_4c31935336cc15b";
+const DB_USER = "b68f3d59fc5770";
+const DB_PASS = "a8132c98";
 const DB_CONFIG = {
     dialect: "mysql",
-    host:"localhost",
+    host:"us-cdbr-east-05.cleardb.net",
     port:3306
 };
 
