@@ -1,4 +1,7 @@
 const slugify = require('slugify');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op
+
 const {Sucos, Categorias} = require('../models/index')
 
 const SucosController = {
@@ -19,8 +22,20 @@ const SucosController = {
         return res.status(500).json(error);
           })
     },
+    returnOneJuice: async(req,res) =>{
+        let slug = req.params.slug
+        await Sucos.findOne({
+            where: {slug}
+        }).then(response => {
+            return res.status(200).json(response);
+        })
+        .catch(error => {
+        return res.status(500).json(error);
+          })
+    },
+
     returnAllJuices: async(req,res) =>{
-        Sucos.findAll()
+        await Sucos.findAll()
         .then(response => {
             return res.status(200).json(response);
         })
@@ -28,17 +43,20 @@ const SucosController = {
         return res.status(500).json(error);
           })
     },
-    returnJuicesByCategory: async (req,res) =>{
-        let slug = req.params.slug
-        Categorias.findOne({
-           where: {slug},
-           include: Sucos
-        }).then(result => {
-                return res.status(200).json(result);
-            })
-        .catch(error => {
+    returnJuiceByName : async (req,res) =>{   
+        let busca = req.body.busca
+        await Sucos.findAll({ 
+            where: { 
+                nome: { 
+                    [Op.like] : `%${busca}%` }},
+            raw:true
+        })      
+        .then(response => {
+            console.log(response)
+        return res.status(200).json(response);
+        }).catch(error => {
         return res.status(500).json(error);
-          })
+        })
     }
 }
 

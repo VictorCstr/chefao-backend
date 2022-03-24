@@ -25,6 +25,18 @@ const CategoriasController = {
         return res.status(500).json(error);
           })
     },
+    returnJuicesByCategory: async (req,res) =>{
+        let slug = req.params.slug
+        await Categorias.findOne({
+           where: {slug},
+           include: Sucos
+        }).then(result => {
+                return res.status(200).json(result);
+            })
+        .catch(error => {
+        return res.status(500).json(error);
+          })
+    }
 }
 
 module.exports = CategoriasController
