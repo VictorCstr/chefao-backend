@@ -10,12 +10,21 @@ const CategoriasController = {
             descricao
         }) 
         .then(response => {
+            return res.status(201).json(response);
+        })
+        .catch(error => {
+        return res.status(500).json(error);
+          })
+    },
+    returnAllCategories: async(req,res) =>{
+        Categorias.findAll()
+        .then(response => {
             return res.status(200).json(response);
         })
         .catch(error => {
         return res.status(500).json(error);
           })
-    } 
+    },
 }
 
 module.exports = CategoriasController

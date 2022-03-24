@@ -3,14 +3,14 @@ const routes = express.Router()
 
 const CategoriasController = require('../controllers/CategoriasController')
 const SucosController = require('../controllers/SucosController')
+const usuariosController = require('../controllers/usuariosController')
 
+routes.get('/categories', CategoriasController.returnAllCategories)
+routes.post('/categories', CategoriasController.createCategory)
 
-routes.post('/cadastrar', CategoriasController.createCategory)
-
-routes.get('/juices', SucosController.returnJuices)
-routes.get('/juices/:slug')
-routes.get('/juices/:category', SucosController.returnJuicesByCategory)
-routes.post('/cadastrarjuice', SucosController.createJuices)
+routes.get('/juices', SucosController.returnAllJuices)
+routes.get('/juices/:slug', SucosController.returnJuicesByCategory)
+routes.post('/juices', SucosController.createJuices)
 
 
 module.exports = routes
