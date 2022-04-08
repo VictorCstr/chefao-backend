@@ -31,6 +31,10 @@ const Sucos = db.define(
         type: Sequelize.STRING,
         allowNull: false,
      },
+     cor:{
+        type: Sequelize.STRING,
+        allowNull: false,
+     },
      id_categoria:{
         type: Sequelize.INTEGER,
         allowNull: false,
