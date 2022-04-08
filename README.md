@@ -10,7 +10,7 @@
 </p>
 
 <h1 align="center">Desafio Chefão - Grupo 10</h1> <br><br>
-<img src="https://github.com/VictorCstr/chefao-backend/blob/main/exemplo.jpg" height="800">
+
 
 ## :computer: O projeto 
 - O nosso desafio foi criar um produto do zero. Vamos criar uma apresentação de portfólio navegável e interativo de um novo empreendimento.
