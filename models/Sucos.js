@@ -23,10 +23,6 @@ const Sucos = db.define(
         type: Sequelize.STRING,
         allowNull: false,
      },
-     valor:{
-        type: Sequelize.DOUBLE,
-        allowNull: false,
-     },
      linkFoto:{
         type: Sequelize.STRING,
         allowNull: false,
