@@ -10,6 +10,7 @@
 </p>
 
 <h1 align="center">Desafio Chefão - Grupo 10</h1> <br><br>
+<a href="https://juice-mania.herokuapp.com/categories"><img src="https://github.com/VictorCstr/chefao-backend/blob/main/exemplo.jpg"></a>
 
 
 ## :computer: O projeto 
