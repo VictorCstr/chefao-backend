@@ -4,7 +4,7 @@
 
 <p align="center">
  <a href="#computer-o-projeto">Sobre</a> •
- <a href="#rocket-tecnologias">Objetivo</a> •  
+ <a href="#rocket-tecnologias">Tecnologias Usadas</a> •  
  <a href="#mag_right-para-rodar-o-projeto">Como rodar</a> • 
  <a href="#thought_balloon-requisições">Todas as Requisições</a> 
 </p>
